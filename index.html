@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pit-Stop Data Visualisation</title>
+
+    <script src="lib/jquery-3.6.0.min.js"></script>
+    <script src="lib/gmynd.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="renderer">
+        <div id="follower"></div>
+
+        <!-- Heading -->
+        <div id="heading">
+            <h1>Blink and You'll Miss It:<br> Formula 1 PitStop</h1>
+            <h2>Which racingteam does the fastest PitStop?</h2>
+        </div>
+
+        <!-- Start Screen -->
+        <div id="startScreen">
+            <p>This visualization analyzes Formula 1 pit stop durations to identify the constructor 
+                with the highest overall speed and the current record holder for the fastest pit stop on asphalt.</p>
+            
+                <div id="startButton"><p>start ></p></div>
+            <div id="rights">
+                <p><a href="https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020"
+                        target="_blank">Sources</a> - Visulised by <a>Tim Bluthardt</a></p>
+            </div>
+        </div>
+
+        
+        <!-- Info Text -->
+        <div id="fastestText" class="infoText">
+            <p>Arranged in order based on the <br> <strong>fastest PiStop</strong> in this time period.</p>
+        </div>
+        <div id="averageText" class="infoText">
+            <p>Arranged in order based on the <br> <strong>average speed</strong> of the constructors throughout the
+                seasons.</p>
+        </div>
+        <div id="lapText" class="infoText">
+            <p>Arranged in <strong>Laps</strong> in whitch the PitStop happed. <br></p>
+        </div>
+
+        <!-- Menue  -->
+        <div id="menueBox">
+            <div id="average" class="MenueItem">average </div>
+            <div id="fastest" class="MenueItem">fastest </div>
+            <hr style="height:0.5px;border-width:0;color:black;background-color:gray;width: 200px; position: absolute; bottom: 30px; left: 50%; margin-left: -100px;">
+        </div>
+        <div id="menueBox2">
+            <div id="lap" class="MenueItem">lap </div>
+            <hr style="height:0.5px;border-width:0;color:black;background-color:gray;width: 100px; position: absolute; bottom: 30px; left: 60%; margin-left: -60px;">
+        </div>
+
+
+    </div>
+
+    <script src="data/data.js"></script>
+    <script src="js/calculatePoints.js"></script>
+    <script src="js/racesMap.js"></script>
+    <script src="js/PitRound.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
